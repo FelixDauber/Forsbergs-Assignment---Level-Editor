@@ -64,7 +64,7 @@ public class TileEditor : MonoBehaviour
     }
     public void UpdateColour(Color color)
     {
-        TileSet.tileSet.UpdateData(tile.TileData, tile.TileData);
+        TileMap.tileSet.UpdateData(tile.TileData, tile.TileData);
         tile.TileData.color = color;
         tile.UpdateColour();
     }

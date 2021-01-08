@@ -6,7 +6,7 @@ public class TileTypes : MonoBehaviour
 {
     public TileEditor tilePrefab;
     public TileEditor[] tiles;
-    TileSet tileset;
+    TileMap tileset;
 
     public static TileEditor currentTileEditor;
     public static Tile currentTile;
@@ -42,7 +42,7 @@ public class TileTypes : MonoBehaviour
     }
     void AddTiles()
     {
-        Tile[] uniqueTiles = TileSet.tileSet.GetUniqueTiles();
+        Tile[] uniqueTiles = TileMap.tileSet.GetUniqueTiles();
         tiles = new TileEditor[uniqueTiles.Length];
         for (int i = 0; i < uniqueTiles.Length; i++)
         {

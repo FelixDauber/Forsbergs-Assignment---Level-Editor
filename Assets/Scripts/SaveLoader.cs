@@ -9,9 +9,9 @@ public class SaveLoader : MonoBehaviour
     public Button buttonPrefab;
     private void OnEnable()
     {
-        foreach (var item in transform)
+        foreach (Transform item in transform)
         {
-            Destroy((GameObject)item);
+            Destroy(item.gameObject);
         }
         TextAsset[] textAssets = Resources.LoadAll<TextAsset>("Maps");
         foreach (var asset in textAssets)
@@ -24,6 +24,6 @@ public class SaveLoader : MonoBehaviour
     {
         Button newButton = Instantiate(buttonPrefab, transform);
         newButton.GetComponentInChildren<Text>().text = asset.name;
-        newButton.onClick.AddListener(delegate { TileSet.tileSet.LoadMap(AssetDatabase.GetAssetPath(asset)); });
+        newButton.onClick.AddListener(delegate { TileMap.tileSet.LoadMap(AssetDatabase.GetAssetPath(asset)); });
     }
 }

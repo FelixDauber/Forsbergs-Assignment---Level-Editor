@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileSet : MonoBehaviour
+public class TileMap : MonoBehaviour
 {
     public Tile tilePrefab;
     public Tile[] tiles;
     public int width = 10, height = 10;
-    public static TileSet tileSet;
+    public static TileMap tileSet;
     public Vector2 size = new Vector2(10, 10);
     public Vector2 actualSize;
     public string saveFileName;

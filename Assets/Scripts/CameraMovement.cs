@@ -11,6 +11,6 @@ public class CameraMovement : MonoBehaviour
     }
     public void Center()
     {
-        transform.position = new Vector2(TileSet.tileSet.offset, TileSet.tileSet.offset);
+        transform.position = new Vector2(TileMap.tileSet.offset, TileMap.tileSet.offset);
     }
 }
